@@ -1,0 +1,122 @@
+/* ===========================================
+        ANIMATIONS
+=========================================== */
+
+@keyframes fadeUp{
+
+0%{
+
+opacity:0;
+
+transform:translateY(60px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0px);
+
+}
+
+}
+
+.hero-left{
+
+animation:fadeUp 1s ease forwards;
+
+}
+
+.hero-right{
+
+animation:fadeUp 1.3s ease forwards;
+
+}
+
+.logo{
+
+animation:fadeUp .7s ease;
+
+}
+
+.navbar ul{
+
+animation:fadeUp .9s ease;
+
+}
+
+.profile-circle{
+
+animation:floating 5s ease-in-out infinite;
+
+}
+
+@keyframes floating{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+.btn-primary,
+.btn-secondary{
+
+transition:.35s;
+
+}
+
+.btn-primary:hover{
+
+transform:translateY(-7px);
+
+}
+
+.btn-secondary:hover{
+
+transform:translateY(-7px);
+
+}
+
+.hero-left h1 span{
+
+animation:glow 2.5s infinite;
+
+}
+
+@keyframes glow{
+
+0%{
+
+text-shadow:0 0 10px #4f8cff;
+
+}
+
+50%{
+
+text-shadow:0 0 35px #4f8cff;
+
+}
+
+100%{
+
+text-shadow:0 0 10px #4f8cff;
+
+}
+
+}
