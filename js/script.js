@@ -1,24 +1,75 @@
-/* =======================================
-        PORTFOLIO SCRIPT
-======================================= */
+const words=[
 
-console.log("Portfolio Loaded Successfully");
+"AI Enthusiast",
 
-/* Smooth navbar shadow */
+"Full Stack Developer",
 
-window.addEventListener("scroll",function(){
+"Java Developer",
+
+"Python Programmer",
+
+"Machine Learning Explorer"
+
+];
+
+let i=0;
+
+let j=0;
+
+let current="";
+
+let deleting=false;
+
+function type(){
+
+current=words[i];
+
+if(!deleting){
+
+document.getElementById("typing").textContent=current.substring(0,j++);
+
+if(j>current.length){
+
+deleting=true;
+
+setTimeout(type,1200);
+
+return;
+
+}
+
+}else{
+
+document.getElementById("typing").textContent=current.substring(0,j--);
+
+if(j==0){
+
+deleting=false;
+
+i++;
+
+if(i==words.length)i=0;
+
+}
+
+}
+
+setTimeout(type,deleting?50:100);
+
+}
+
+type();
+
+window.addEventListener("scroll",()=>{
 
 const header=document.querySelector("header");
 
-header.style.boxShadow=window.scrollY>20
-?"0 10px 35px rgba(0,0,0,.4)"
-:"none";
+header.style.background=
+
+window.scrollY>50
+
+?"rgba(3,7,18,.9)"
+
+:"rgba(255,255,255,.05)";
 
 });
-
-
-/* Current Year */
-
-document.querySelector("footer").innerHTML=
-
-`© ${new Date().getFullYear()} Sushant Bhanudas Shekhar • All Rights Reserved`;
