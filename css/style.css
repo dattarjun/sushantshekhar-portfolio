@@ -151,10 +151,13 @@ margin:auto;
 }
 .hero-left{
 
-flex:1;
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
 
 }
-
 .hero-left h3{
 
 font-size:22px;
@@ -296,11 +299,8 @@ font-size:15px;
 }
 
 .profile-image{
-
-width:380px;
-
-height:380px;
-
+width:100%;
+max-width:420px;
 aspect-ratio:1/1;
 
 object-fit:cover;
@@ -338,9 +338,9 @@ gap:22px;
 }
 .social a{
 
-width:65px;
+width:60px;
 
-height:65px;
+height:60px;
 
 display:flex;
 
@@ -348,8 +348,7 @@ justify-content:center;
 
 align-items:center;
 
-font-size:28px;
-
+font-size:26px;
 border-radius:50%;
 
 background:rgba(255,255,255,.08);
@@ -492,5 +491,108 @@ color:#4f8cff;
 line-height:1.8;
 
 color:#dcdcdc;
+
+}
+/* ===========================================
+        PREMIUM SKILLS
+=========================================== */
+
+.skills{
+
+padding:130px 8%;
+
+max-width:1450px;
+
+margin:auto;
+
+}
+
+.skill-block{
+
+margin-bottom:55px;
+
+padding:35px;
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:22px;
+
+transition:.35s;
+
+}
+
+.skill-block:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 20px 45px rgba(79,140,255,.18);
+
+}
+
+.skill-block h3{
+
+font-size:28px;
+
+margin-bottom:28px;
+
+color:#4f8cff;
+
+}
+
+.pill-container{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:18px;
+
+}
+
+.pill{
+
+padding:14px 24px;
+
+background:#111827;
+
+border-radius:50px;
+
+border:1px solid rgba(255,255,255,.08);
+
+font-size:16px;
+
+font-weight:500;
+
+transition:.35s;
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+}
+
+.pill i{
+
+font-size:20px;
+
+color:#4f8cff;
+
+}
+
+.pill:hover{
+
+background:#2563eb;
+
+transform:translateY(-5px);
+
+box-shadow:0 8px 25px rgba(37,99,235,.35);
+
+cursor:default;
 
 }
