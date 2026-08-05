@@ -255,3 +255,19 @@ flex-wrap:wrap;
 }
 
 }
+
+@media(max-width:900px){
+
+.about-container{
+
+grid-template-columns:1fr;
+
+}
+
+.about{
+
+text-align:center;
+
+}
+
+}
