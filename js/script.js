@@ -1,75 +1,115 @@
-const words=[
+/* ==========================================================
+   PORTFOLIO JAVASCRIPT
+========================================================== */
 
-"AI Enthusiast",
 
-"Full Stack Developer",
+/* ==========================================================
+   TYPING EFFECT
+========================================================== */
 
-"Java Developer",
+const typingElement = document.getElementById("typing");
 
-"Python Programmer",
-
-"Machine Learning Explorer"
-
+const words = [
+    "AI Enthusiast",
+    "RAG Explorer",
+    "Software Developer",
+    "Java Developer",
+    "Python Programmer",
+    "Full Stack Learner"
 ];
 
-let i=0;
+let wordIndex = 0;
+let charIndex = 0;
+let deleting = false;
 
-let j=0;
 
-let current="";
+function typeText() {
 
-let deleting=false;
+    const currentWord = words[wordIndex];
 
-function type(){
+    if (!deleting) {
 
-current=words[i];
+        typingElement.textContent =
+            currentWord.substring(0, charIndex + 1);
 
-if(!deleting){
+        charIndex++;
 
-document.getElementById("typing").textContent=current.substring(0,j++);
+        if (charIndex === currentWord.length) {
 
-if(j>current.length){
+            deleting = true;
 
-deleting=true;
+            setTimeout(typeText, 1300);
 
-setTimeout(type,1200);
+            return;
+        }
 
-return;
+    } else {
+
+        typingElement.textContent =
+            currentWord.substring(0, charIndex - 1);
+
+        charIndex--;
+
+        if (charIndex === 0) {
+
+            deleting = false;
+
+            wordIndex++;
+
+            if (wordIndex >= words.length) {
+                wordIndex = 0;
+            }
+        }
+    }
+
+    setTimeout(
+        typeText,
+        deleting ? 55 : 95
+    );
+}
+
+typeText();
+
+
+/* ==========================================================
+   CURRENT YEAR
+========================================================== */
+
+const yearElement =
+    document.getElementById("current-year");
+
+if (yearElement) {
+
+    yearElement.textContent =
+        new Date().getFullYear();
 
 }
 
-}else{
 
-document.getElementById("typing").textContent=current.substring(0,j--);
+/* ==========================================================
+   NAVBAR ON SCROLL
+========================================================== */
 
-if(j==0){
+const header =
+    document.querySelector("header");
 
-deleting=false;
+window.addEventListener("scroll", () => {
 
-i++;
+    if (window.scrollY > 40) {
 
-if(i==words.length)i=0;
+        header.style.background =
+            "rgba(2, 6, 23, 0.92)";
 
-}
+        header.style.boxShadow =
+            "0 10px 35px rgba(0,0,0,0.30)";
 
-}
+    } else {
 
-setTimeout(type,deleting?50:100);
+        header.style.background =
+            "rgba(3, 7, 18, 0.72)";
 
-}
-
-type();
-
-window.addEventListener("scroll",()=>{
-
-const header=document.querySelector("header");
-
-header.style.background=
-
-window.scrollY>50
-
-?"rgba(3,7,18,.9)"
-
-:"rgba(255,255,255,.05)";
+        header.style.boxShadow =
+            "none";
+    }
 
 });
