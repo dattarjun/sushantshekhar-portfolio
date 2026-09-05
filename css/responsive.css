@@ -306,3 +306,89 @@
     }
 
 }
+
+/* ==========================================================
+   JOURNEY RESPONSIVE
+========================================================== */
+
+@media (max-width: 768px) {
+
+    .journey {
+        padding: 90px 6%;
+    }
+
+    .journey-timeline::before {
+        left: 23px;
+    }
+
+    .journey-item {
+        padding-left: 65px;
+        margin-bottom: 35px;
+    }
+
+    .journey-marker {
+        width: 48px;
+        height: 48px;
+
+        font-size: 17px;
+    }
+
+    .journey-card {
+        padding: 24px;
+    }
+
+    .journey-top {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .journey-card h3 {
+        font-size: 20px;
+    }
+
+    .journey-card h4 {
+        font-size: 14px;
+    }
+
+    .journey-card p,
+    .journey-bullets {
+        font-size: 14px;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .journey {
+        padding: 75px 5%;
+    }
+
+    .journey-timeline::before {
+        left: 20px;
+    }
+
+    .journey-item {
+        padding-left: 55px;
+    }
+
+    .journey-marker {
+        width: 42px;
+        height: 42px;
+
+        font-size: 15px;
+    }
+
+    .journey-card {
+        padding: 20px;
+    }
+
+    .journey-card h3 {
+        font-size: 18px;
+    }
+
+    .journey-date {
+        font-size: 10px;
+    }
+
+}
