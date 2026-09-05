@@ -13,7 +13,6 @@ const words = [
     "AI Enthusiast",
     "RAG Explorer",
     "Software Developer",
-    "Java Developer",
     "Python Programmer",
     "Full Stack Learner"
 ];
