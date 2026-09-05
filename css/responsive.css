@@ -256,3 +256,53 @@
     }
 
 }
+/* ==========================================================
+   PROJECT RESPONSIVE
+========================================================== */
+
+@media (max-width: 850px) {
+
+    .projects-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .project-image {
+
+        height: 210px;
+
+    }
+
+    .project-content {
+
+        padding: 23px;
+
+    }
+
+    .project-content h3 {
+
+        font-size: 21px;
+
+    }
+
+    .project-description {
+
+        min-height: auto;
+
+        font-size: 13px;
+
+    }
+
+    .project-links {
+
+        flex-wrap: wrap;
+
+    }
+
+}
