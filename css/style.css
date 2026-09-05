@@ -1526,3 +1526,20 @@ footer {
 .project-note strong {
     color: var(--primary-light);
 }
+
+/* Full name blinking effect */
+.name-blink {
+    display: inline;
+    color: #ffffff;
+    animation: nameBlink 1.8s ease-in-out infinite;
+}
+
+@keyframes nameBlink {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.45;
+    }
+}
